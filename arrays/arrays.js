@@ -104,15 +104,70 @@
 // console.log(fruits.splice(0, 1))
 // console.log(fruits)
 
+// // Date Object
+// const date = new Date()
+// // console.log(date)
+// const year = date.getFullYear()
+// const month = date.getMonth()
+// const day = date.getDate()
+// const hour = date.getHours()
+// const newYear = date.setFullYear(2024, 2, 16);
+//
+// console.log(year, month, day, hour)
+// console.log(newYear)
 
-// Date Object
-const date = new Date()
-// console.log(date)
-const year = date.getFullYear()
-const month = date.getMonth()
-const day = date.getDate()
-const hour = date.getHours()
-const newYear = date.setFullYear(2024, 2, 16);
+//               *************Array of objects*****************
 
-console.log(year, month, day, hour)
-console.log(newYear)
+const details = [
+  { name: "Prince addo", gender: "Male", age: 24 },
+  { name: "Adams Rafiw", gender: "Male", age: 23 },
+  { name: "Sandra", gender: "Female", age: 22 },
+  { name: "Wallace Allen Lawson Lartey", gender: "Male", age: 19 },
+  { name: "Mary", gender: "Female", age: 22 },
+  { name: "Jeremiah", gender: "Male", age: 20 },
+  { name: "Cindy", gender: "Female", age: 22 },
+  { name: "Cosmos Beryin", gender: "Male", age: 24 },
+  { name: "Martha", gender: "Female", age: 22 },
+];
+
+details.push({ name: "Daniel Amoako", gender: "Male", age: 35 });
+details.push({ name: "Kelvin Otto ", gender: "Male", age: 24 });
+
+console.log(details);
+
+//                      ************Methods of Array of objects****************
+
+//                      ----------forEach() Method--------------------
+details.forEach((detail) => console.log(detail.name));
+details.forEach((detail) => console.log(detail.age));
+
+//                      ----------------Map() Method-------------------
+
+const detailsNames = details.map((detail) => detail.name);
+console.log("Participant names are : ");
+console.log(detailsNames);
+console.log(detailsNames.reverse());
+
+const detailsAge = details.map((detail) => detail.age);
+console.log("Participant ages are : ");
+console.log(detailsAge);
+
+//                      --------------filter() Method-------------------
+
+const femaleParticipants = details.filter(
+  (detail) => detail.gender === "Female",
+);
+console.log("The females are : ");
+console.log(femaleParticipants);
+
+const maleParticipants = details.filter((detail) => detail.gender === "Male");
+
+console.log("The males are : ");
+
+console.log(maleParticipants);
+
+const ageOfParticipants = details.filter((detail) => detail.age === 24);
+
+console.log("Participants who are 24 years of age are : ");
+
+console.log(ageOfParticipants);
